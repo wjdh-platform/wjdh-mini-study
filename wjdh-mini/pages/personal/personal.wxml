@@ -1,0 +1,36 @@
+<!--pages/personal/personal.wxml-->
+<view class="personal">
+    <view class="headerBg">
+    <view class="userCont" bindtap="getLogin">
+        <view class="userImg">
+          <image src="{{avatar?avatar:defUserImg}}"></image>
+        </view>
+        <view class="userName">{{name?name:"登录"}}</view>
+         
+      </view>
+    </view>
+    <view class="personalCont">
+      <view class="list">
+        <view class="listColumn" bindtap="houseListO">
+          <image src="./../../static/image/houseList.png" class="houseList"></image>
+          <view class="listText">房屋列表</view>
+          <image src="./../../static/image/arrow.png" class="arrow"></image>
+        </view>
+        <view class="listColumn" bindtap="payList">
+          <image src="./../../static/image/bill.png" class="houseList"></image>
+          <view class="listText">账单列表</view>
+          <image src="./../../static/image/arrow.png" class="arrow"></image>
+        </view>
+        <view class="listColumn" bindtap="repairList">
+          <image src="./../../static/image/baoxiu.png" class="houseList"></image>
+          <view class="listText">报修列表</view>
+          <image src="./../../static/image/arrow.png" class="arrow"></image>
+        </view>
+        <view class="listColumn" bindtap="proposalList">
+          <image src="./../../static/image/tousu.png" class="houseList"></image>
+          <view class="listText">投诉建议</view>
+          <image src="./../../static/image/arrow.png" class="arrow"></image>
+        </view>
+      </view>
+    </view>
+</view>

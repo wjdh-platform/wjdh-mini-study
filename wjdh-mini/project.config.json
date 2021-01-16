@@ -1,0 +1,205 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.2",
+  "appid": "wx3c3d7ceb2deb958d",
+  "projectname": "wjdh-miniP",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/personal/getCode/getCode",
+          "pathName": "pages/personal/getCode/getCode",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登录",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/personal/personal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "业主房屋列表",
+          "pathName": "pages/houseList/ownerHouseList/ownerHouseList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "注册",
+          "pathName": "pages/login/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "绑定小区",
+          "pathName": "pages/bindCell/bindCell",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "小区列表",
+          "pathName": "pages/houseList/ownerHouseList/ownerHouseList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小区详情",
+          "pathName": "pages/houseDetails/houseDetails",
+          "query": "?id=17",
+          "scene": null
+        },
+        {
+          "name": "物业报修",
+          "pathName": "pages/repair/repair",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "公告通知",
+          "pathName": "pages/notice/notice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "公告详情",
+          "pathName": "pages/notice/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "应急电话",
+          "pathName": "pages/phoneCall/phoneCall",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "投诉建议",
+          "pathName": "pages/proposal/proposal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "访客通行",
+          "pathName": "pages/visitor/visitor",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "生活缴费",
+          "pathName": "pages/lifePay/lifePay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/houseList/payList/payList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "demo",
+          "pathName": "pages/demo/demo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "账单列表",
+          "pathName": "pages/houseList/payList/payList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的报修",
+          "pathName": "pages/houseList/repairList/repairList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情",
+          "pathName": "pages/houseList/payList/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "投诉建议列表",
+          "pathName": "pages/houseList/proposalList/repairList",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

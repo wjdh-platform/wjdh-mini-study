@@ -1,0 +1,36 @@
+<!--pages/houseList/payList/payList.wxml-->
+<view class="payList" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType" title="{{title}}" bindcloseBtn="closeBtn">
+  </change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view class="payListCont">
+    <view class="columnC">
+        <view class="titleC">选择房屋</view>
+        <picker bindchange="bindHouseList" value="{{houseListIdx}}" range="{{houseList}}" range-key="introduction"
+          data-id="{{houseList[houseListIdx].id}}" disabled="{{homeListDis}}">
+          <view class="picker">
+            {{houseList[houseListIdx].introduction}}
+          </view>
+        </picker>
+        <image class="arrow" src="./../../../static/image/arrow.png"></image>
+      </view>
+    <view class="column" wx:for="{{payList}}" wx:if="{{payList.length>0}}">
+    <view class="title">{{item.payment_name}}</view>
+    <view class="listDetail">
+      <text>交易单号：{{item.payment_number}}</text>
+      <text>商户单号：{{item.payment_shop_number}}</text>
+      <text>支付金额：{{item.total_amount}}</text>
+      <text>交易时间：{{item.paid_at}}</text>
+    </view>
+    <view class="lookMore" wx:if="{{!item.isShow}}" bindtap="orderListType" data-idx="{{index}}">点击查看订单列表</view>
+    <view class="orderList" wx:else>
+      <view class="orderClo" wx:for="{{item.orders}}" wx:for-item="itemN" bindtap="orderDetails" data-id="{{itemN.id}}">
+        <view class="orderTitle">{{itemN.title}}</view>
+        <view class="orderBtn">订单详情</view>
+      </view>
+    </view>
+  </view>
+  <view class="noData" wx:if="{{payList.length==0}}">暂无数据</view>
+  </view>
+  
+</view>

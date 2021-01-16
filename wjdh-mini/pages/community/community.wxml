@@ -1,0 +1,4 @@
+<!--pages/community/community.wxml-->
+<view>
+  <web-view src='https://vr.mg.cool/vrsq/vr?sid=B0001'></web-view>
+</view>

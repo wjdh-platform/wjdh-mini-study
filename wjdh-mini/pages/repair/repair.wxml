@@ -1,0 +1,39 @@
+<!--pages/guarantee/guarantee.wxml-->
+<view class="repair" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType" title="{{title}}" bindcloseBtn="closeBtn">
+  </change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view wx:if="{{popupType}}">
+    <form bindsubmit="addressSub">
+      
+      <view class="column">
+      <view class="titleC">报修位置*</view>
+      <input placeholder="请输入" placeholder-class="placeholder" name="repairName" value="{{repairName}}"></input>
+    </view>
+    <view class="columnT">
+      <view class="titleC">报修说明*</view>
+      <textarea bindblur="bindTextAreaBlur" auto-height placeholder-class="intro" name="repairIntro" placeholder="报修说明" />
+    </view>
+    <!-- <view class="columnT">
+      <view class="titleC">上传照片</view>
+      <view class="uploadPhoto">
+        <view class="photoClo" wx:if="{{imgSrc}}">
+        <image class="photoImg" src="{{ imgSrc}}" alt="" mode="heightFix"></image>
+        <image src="./../../static/image/imgClose.png" class="imgClose" bindtap="delPhoto"></image>
+        </view>
+        <view class="addImg" bindtap="addImg"></view>
+      </view>
+    <canvas canvas-id= "photo_canvas" style= "width:{{canvasWidth}}px;height:{{canvasHeight}}px;position: absolute;left:-300px;top:-300px;" ></canvas>
+    </view> -->
+    <view class="btn-area ">
+      <button formType="submit" class="saveBtn ">提交</button>
+    </view>
+  </form>
+
+</view>
+  <view class="popup" wx:else>
+      <view class="images"><image src="../../static/image/submitSucc.png"></image></view>
+      <view class="titleP">提交成功</view>
+      <view class="textP">我们会尽快为您落实反馈</view>
+    </view>
+</view>

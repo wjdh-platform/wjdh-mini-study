@@ -1,0 +1,51 @@
+/* pages/notice/details/details.wxss */
+.details{
+  padding: 60rpx;
+}
+.icon{
+  width: 75rpx;
+  height: 75rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon image{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  display: inline-block;
+  vertical-align: middle;
+}
+.text{
+  font-size: 26rpx;
+  color: #282828;
+  line-height: 26rpx;
+  margin-bottom: 10rpx;
+}
+.time{
+  font-size: 24rpx;
+  color: #828282;
+  line-height: 24rpx;
+}
+.introduction{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 45rpx;
+}
+.imgList{
+  margin-top: 30rpx;
+}
+.imgList image{
+  width: 206rpx;
+  height: 149rpx;
+  border-radius: 8px;
+  margin-right: 20rpx;
+}
+.titleName{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+  color: #333;
+  text-align: center;
+}

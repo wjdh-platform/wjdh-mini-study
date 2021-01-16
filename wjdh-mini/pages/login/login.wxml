@@ -1,0 +1,49 @@
+<!--pages/login/login.wxml-->
+
+<view class="loginRegister">
+
+  <!--登录模块-->
+  <view class="loginCont">
+    <view class="loginWidth">
+      <view class="helloText">欢迎使用万家灯火小程序</view>
+      <view class="helloText02">不辜负每一次的相遇</view>
+    </view>
+    <view class="phoneLogin" wx:if="{{loginType}}">
+    <view class="loginWidth formCont">
+      <view class="form">
+        <view class="title">手机号</view>
+        <input placeholder="请输入手机号" placeholder-class="placeholderClass" bindinput="loginPhoneBlur"></input>
+      </view>
+      <!-- <view class="form" wx:if="{{changeLoginType}}">
+        <view class="title">密码</view>
+        <input placeholder="请输入密码" placeholder-class="placeholderClass" bindblur="loginpassBlur" password="true"></input>
+      </view> -->
+      <view class="form">
+        <view class="title">验证码</view>
+        <view class="code">
+          <input placeholder="请输入验证码" placeholder-class="placeholderClass"  bindblur="loginCodeBlur"></input>
+          <view class="codeBtn" bindtap="loginObtainCode">{{codeBtnText}}</view>
+        </view>
+      </view>
+      <!-- <view class="changeLogin" bindtap="changeLogin">{{changeLoginType?loginCode:LoginPass}}</view> -->
+    </view>
+    <view class="registerBtn" bindtap="loginBtn">登录</view>
+    <view class="loginWidth">
+      <!-- <view class="forgetPass">忘记密码</view> -->
+      <!-- <view class="userRegister" bindtap="userRegister">微信手机号快捷登录</view> -->
+      <!-- <view class="userRegister" bindtap="userRegister">微信手机号快捷登录</view> -->
+    </view>
+  </view>
+</view>
+<view class="loginTypeC" wx:if="{{!loginType}}">
+  <button class="codeLogin" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信手机号快捷登录</button>
+  <button class="wxLogin" open-type="getUserInfo" bindgetuserinfo="getUserInfo">手机号验证码登录</button>
+</view>
+<view class="popup" wx:if="{{popupType}}">
+  <view class="popupCont">
+    <view class="titleP">提示</view>
+    <view class="introP">请授权获取用户信息，以便收集用户信息</view>
+    <button class="wxLogin popupW" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权用户信息</button>
+  </view>
+</view>
+</view>

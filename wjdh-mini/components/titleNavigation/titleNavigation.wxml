@@ -1,0 +1,20 @@
+<view class="navigate-container" style="{{detail?'background:transparent':''}};">
+  <!-- status-bar -->
+  <view style="{{ statusBarStyle }}"></view>
+  <!-- navigation-bar -->
+  <view class="navigate-box" style="{{ navigationBarStyle }}">
+
+    <!--  商品详情页开始-->
+    <view class="navBar" wx:if="{{detail}}">
+      <view class="return" bindtap="returnPage" wx:if="{{backType}}">
+        <!-- <image src="/static/icon/returnIcon.png"></image> -->
+        <image src="../../static/image/returnIcon.png"></image>
+      </view>
+      <!-- <view class="home" bindtap="goHome">
+        <image src="../../static/icon/homeIcon.png"></image>
+      </view> -->
+    </view>
+    <view class="title">{{title!=''?title:'万家灯火'}}</view>
+    <!--  商品详情页结束-->
+  </view>
+</view>

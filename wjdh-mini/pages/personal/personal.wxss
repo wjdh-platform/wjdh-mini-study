@@ -1,0 +1,62 @@
+/* pages/personal/personal.wxss */
+
+.headerBg{
+  background: url('http://wjdh-platform.test/mini/bg/personalBg.jpg') no-repeat;
+  background-size: contain;
+  width: 750rpx;
+  height: 246rpx;
+  border-bottom: solid 20rpx #F4F5F8;
+}
+.userImg,.userName{
+  display: inline-block;
+  vertical-align: middle;
+}
+.userImg{
+  
+}
+.userImg image{
+  width: 120rpx;
+  height: 120rpx;
+  border: solid 7rpx #57E8CB;
+  border-radius: 50%;
+}
+.userCont{
+  padding: 30rpx 0 0 23rpx;
+  position: relative;
+}
+.userCont button{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  background: transparent;
+}
+.userName{
+  font-size: 35rpx;
+  color: #fff;
+  margin-left: 14rpx;
+}
+.listColumn{
+  height: 110rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  border-bottom: solid 1rpx #e8e8e8;
+  display: flex;
+  align-items: center;
+}
+.houseList{
+  width: 39rpx;
+  height: 42rpx;
+}
+.listText{
+  flex: 1;
+  text-align: left;
+  margin-left: 30rpx;
+  color: #393939;
+}
+.arrow{
+  width:14rpx;
+  height: 24rpx;
+}

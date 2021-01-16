@@ -1,0 +1,50 @@
+/* pages/houseList/payList/details/details.wxss */
+page {
+  background: #F7F9FA;
+}
+
+.column {
+  width: 690rpx;
+  margin: 25rpx auto 0;
+  background: #FFFFFF;
+  box-shadow: 0px 6rpx 28rpx 4rpx rgba(125, 125, 125, 0.05);
+  border-radius: 15rpx;
+  padding: 0 30rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.detailsCont,.detailsContO {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsCont {
+  margin-bottom: 10rpx;
+}
+
+.title {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid rgba(84, 84, 84, .2);
+  margin-bottom: 20rpx;
+}
+
+.titleS {
+  font-size: 28rpx;
+  /* font-family: PingFang SC; */
+  /* font-weight: bold; */
+  color: #A1A1A1;
+}
+
+.titleIntro {
+  font-size: 28rpx;
+  /* font-weight: bold; */
+  color: #333333;
+}
+.detailsContO{
+  align-items: flex-start;
+}
+.detailsContO .titleIntro {
+  width: 75%;
+}

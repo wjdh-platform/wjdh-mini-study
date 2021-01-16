@@ -1,0 +1,97 @@
+/* pages/houseList/payList/payList.wxss */
+page{
+  background: #F7F9FA;
+  /* padding-top: 100rpx; */
+}
+.payListCont{
+  padding-top: 20rpx;
+}
+.column{
+  margin: 0 auto 30rpx;
+  width: 690rpx;
+  /* height: 323px; */
+  background: #FFFFFF;
+  box-shadow: 0px 6rpx 28rpx 4rpx rgba(125, 125, 125, 0.05);
+  border-radius: 13rpx;
+  padding: 25rpx 30rpx 0;
+  box-sizing: border-box;
+}
+.title{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.listDetail{
+  border-bottom: solid 1rpx rgba(107,107,107,.4);
+}
+.listDetail text{
+  display: block;
+  font-size: 26rpx;
+  /* font-weight: bold; */
+  color: #333333;
+  line-height: 26rpx;
+  margin-bottom: 15rpx;
+}
+.lookMore{
+  
+  font-size: 24rpx;
+  color: #50DABE;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.orderClo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45rpx;
+  margin-top: 26rpx;
+}
+.orderTitle{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  /* font-weight: bold; */
+  color: #333333;
+}
+.orderBtn{
+  width: 130rpx;
+  height: 45rpx;
+  border: 2rpx solid #50DABE;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height-step: 45rpx;
+  font-size: 25rpx;
+  /* font-weight: bold; */
+  color: #50DABE;
+}
+.orderList{
+  padding-bottom: 20rpx;
+}
+.columnC{
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1rpx #ececec;
+  height: 94rpx;
+  padding: 0 40rpx;
+  background: #FFFFFF;
+  margin-bottom: 20rpx;
+}
+.title{
+  font-size: 30rpx;
+  color: #424242;
+  width: 90%;
+}
+picker{
+  flex: 1;
+  text-align: left;
+  font-size: 30rpx;
+  color: #424242;
+  margin-left: 30rpx;
+}
+.arrow{
+  width: 14rpx;
+  height: 24rpx;
+}

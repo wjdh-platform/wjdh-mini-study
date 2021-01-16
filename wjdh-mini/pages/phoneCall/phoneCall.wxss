@@ -1,0 +1,50 @@
+/* pages/phoneCall/phoneCall.wxss */
+page{
+  /* padding: 50rpx 0 0 35rpx; */
+  /* padding-top: 100rpx; */
+}
+.column image{
+  width: 23rpx;
+  height: 30rpx;
+  margin: 0 12rpx 0 34rpx;
+}
+.title{
+  padding: 20rpx 0 0 30rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.column{
+  width: 330rpx;
+  height: 76rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12rpx 1rpx rgba(8, 8, 8, 0.08);
+  border-radius: 15rpx;
+  float: left;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #080808;
+  margin: 0 15rpx 30rpx 0;
+
+}
+.column:nth-child(odd){
+  margin-left: 35rpx;
+}
+.column:nth-child(1),.column:nth-child(2){
+  margin-top: 20rpx;
+}
+.phoneText{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 76rpx;
+}
+.remarks{
+  font-size: 22rpx;
+  /* font-weight: bold; */
+  color: #B2B2B2;
+  margin-left: 35rpx;
+}
+.phoneCont{
+  overflow: hidden;
+}

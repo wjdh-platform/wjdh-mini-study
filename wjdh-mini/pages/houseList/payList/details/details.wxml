@@ -1,0 +1,52 @@
+<!--pages/houseList/payList/details/details.wxml-->
+<view class="details">
+  <view class="column">
+    <view class="title">服务客户</view>
+    <view class="detailsCont" wx:if="{{orderDetail.house&&orderDetail.house!=''}}">
+      <view class="titleS">收费房屋</view>
+      <view class="titleIntro">{{orderDetail.house}}</view>
+    </view>
+    <view class="detailsCont">
+      <view class="titleS">收费项目</view>
+      <view class="titleIntro">{{orderDetail.title}}</view>
+    </view>
+    <view class="detailsCont">
+      <view class="titleS">收费主体</view>
+      <view class="titleIntro">{{orderDetail.manager}}</view>
+    </view>
+    <view class="detailsCont">
+      <view class="titleS">交易单号</view>
+      <view class="titleIntro">{{orderDetail.payment_number}}</view>
+    </view>
+    <view class="detailsCont">
+      <view class="titleS">商户单号</view>
+      <view class="titleIntro">{{orderDetail.payment_shop_number}}</view>
+    </view>
+    <view class="detailsCont">
+      <view class="titleS">缴费时间</view>
+      <view class="titleIntro">{{orderDetail.date}}</view>
+    </view>
+  </view>
+  <view class="column">
+    <view class="title">服务统计</view>
+    <view class="detailsCont">
+      <view class="titleS">缴费金额</view>
+      <view class="titleIntro">{{orderDetail.amount}}</view>
+    </view>
+    <view class="detailsContO">
+      <view class="titleS">订单备注</view>
+      <view class="titleIntro">{{orderDetail.remark}}</view>
+    </view>
+    <!-- <view class="detailsCont">
+      <view class="titleS">订单明细</view>
+      <view class="titleIntro">{{orderDetail.extra}}</view>
+    </view> -->
+  </view>
+  <view class="column">
+    <view class="title">订单明细</view>
+    <view class="detailsCont" wx:for="{{extra}}" wx:for-item="itemName" wx:for-index="key">
+      <view class="titleS">{{key}}</view>
+      <view class="titleIntro">{{itemName}}</view>
+    </view>
+  </view>
+</view>

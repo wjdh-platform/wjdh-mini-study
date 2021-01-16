@@ -1,0 +1,142 @@
+/* pages/login/login.wxss */
+.loginWidth{
+  width: 610rpx;
+  margin: 0 auto;
+}
+.helloText{
+  font-size: 40rpx;
+  color: #333;
+  margin: 100rpx 0 25rpx;
+  line-height: 40rpx;
+}
+.helloText02{
+  font-size: 28rpx;
+  color: #7d7d7d;
+  line-height: 28rpx;
+}
+.formCont{
+  margin-top: 200rpx;
+}
+.form{
+  border-bottom: solid 1rpx #E9E9E9;
+  margin-top: 30rpx;
+}
+.code{
+  position: relative;
+}
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  color: #50DABE;
+}
+.registerBtn{
+  width: 610rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background: #50DABE;
+  border-radius: 44rpx;
+  margin-top: 75rpx;
+  box-shadow: 0rpx 5rpx 10rpx #50DABE;
+}
+.form .title{
+  font-size: 26rpx;
+  color: #919191;
+  line-height: 26rpx;
+  margin-bottom: 14rpx;
+}
+.form input{
+  font-size: 32rpx;
+  color: #282828;
+  line-height: 32rpx;
+  margin-bottom: 8rpx;
+}
+.placeholderClass{
+  color: #B0B0B0;
+}
+.changeLogin{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 26rpx;
+  margin-top: 20rpx;
+}
+.userRegister{
+  text-align: center;
+  font-size: 28rpx;
+  color: #50DABE;
+  margin-top: 60rpx;
+}
+.forgetPass{
+  float: left;
+  margin-top: 60rpx;
+  font-size: 28rpx;
+  color: #929292;
+}
+.codeLogin,.wxLogin{
+  width: 610rpx !important;
+  height: 88rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 88rpx !important;
+  color: #fff;
+  font-size: 34rpx !important;
+  background: #50DABE;
+  border-radius: 44rpx !important;
+  margin-top: 75rpx;
+  padding: 0 !important;
+  box-shadow: 0rpx 5rpx 10rpx #50DABE;
+  font-weight: normal;
+}
+.wxLogin{
+  background: #FFC275;
+  box-shadow: 0rpx 5rpx 10rpx #FFC275;
+}
+.loginTypeC{
+  margin-top: 300rpx;
+}
+.popup{
+  background: rgba(0,0,0,.3);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.popupCont{
+  width: 522rpx;
+  /* height: 461rpx; */
+  padding: 40rpx 30rpx 60rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+}
+.titleP{
+  text-align: center;
+  font-size: 38rpx;
+  color: #3C3C3C;
+  font-weight: 500;
+}
+.introP{
+  text-align: left;
+  font-size: 28rpx;
+  color: #787878;
+  margin-top: 30rpx;
+  line-height: 40rpx;
+}
+.popupW{
+  width: 80% !important;
+  height: 64rpx !important;
+  line-height: 64rpx !important;
+  font-size: 26rpx !important;
+  color: #FFFFFF !important;
+}

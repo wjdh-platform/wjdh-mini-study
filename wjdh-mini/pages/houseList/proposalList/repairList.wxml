@@ -1,0 +1,36 @@
+<!--pages/houseList/repairList/repairList.wxml-->
+<view class="repairList" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType"
+    title="{{title}}" bindcloseBtn="closeBtn">
+  </change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view class="tabCont">
+    <view class="tabs  {{currentTab == 0?'active':''}}" data-current="0" bindtap="tabTap">未查阅</view>
+    <view class="tabs {{currentTab == 1?'active':''}}" data-current="1" bindtap="tabTap">已采纳</view>
+  </view>
+  <view class="listCont" wx:if="{{currentTab == 0}}">
+    <view wx:if="{{repairListYes.length>0}}">
+    <view class="column" wx:for="{{repairListYes}}" >
+      <view class="title">{{item.category}}</view>
+      <view class="description">{{item.content}}</view>
+      <view class="time">{{item.date}}</view>
+    </view>
+  </view>
+    <view wx:if="{{repairListYes.length==0}}" class="noData">暂无数据</view>
+  </view>
+  <view class="listCont" wx:if="{{currentTab == 1}}">
+    <view wx:if="{{repairListNot.length>0}}"></view>
+    <view class="column" wx:for="{{repairListNot}}" wx:if="{{repairListNot.length>0}}">
+      <view class="title">{{item.category}}</view>
+      <view class="description">{{item.content}}</view>
+      <view class="time">{{item.date}}</view>
+      <view class="reply">
+        <view class="replyTitle">物业回复：</view>
+        <view class="replyCont">{{item.reply}}</view>
+        
+      </view>
+    </view>
+    <view wx:if="{{repairListNot.length==0}}" class="noData">暂无数据</view>
+  </view>
+
+</view>

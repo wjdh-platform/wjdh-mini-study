@@ -1,0 +1,306 @@
+/* pages/bindCell/bindCell.wxss */
+page{
+  background: #F8F8F8;
+}
+.bindCell{
+  padding-bottom: 60rpx;
+}
+.houseCont,.msgCont{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.msgCont{
+  padding-bottom: 40rpx;
+}
+.column{
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1rpx #ececec;
+  height: 94rpx;
+  padding: 0 40rpx;
+}
+.column01{
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1rpx #ececec;
+  height: 94rpx;
+  margin-top: 20rpx;
+}
+.column01 .title{
+  font-size: 28rpx;
+    color: #282828;
+}
+.column:last-child,.msgColumn:last-child{
+  border-bottom:none;
+}
+.column01 picker{
+  font-size: 28rpx;
+}
+picker{
+  flex: 1;
+  text-align: left;
+  font-size: 30rpx;
+  color: #424242;
+}
+.title,.msgTitle{
+  font-size: 30rpx;
+  color: #424242;
+  width: 180rpx;
+}
+.arrow{
+  width: 14rpx;
+  height: 24rpx;
+}
+.msgColumn{
+  display: flex;
+  border-bottom: solid 1rpx #ececec;
+  height: 94rpx;
+  padding: 0 40rpx;
+  align-items: center;
+}
+.msgColumnO{
+  padding: 30rpx 40rpx;
+
+}
+.uploadPhoto{
+  margin-top: 30rpx;
+}
+.photoClo{
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.inputText,.inputDis{
+  font-size: 30rpx;
+  color: #424242;
+  width: 80%;
+}
+.inputPlaceHolder{
+  color: #C6C6C6;
+}
+
+
+
+.inputDis{
+  color: #424242;
+}
+.msgColumn{
+  position: relative;
+}
+.photograph{
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 22rpx;
+  color: #424242;
+}
+.photograph image{
+  width: 39rpx;
+  height: 36rpx;
+  display: block;
+  margin-left: 25rpx;
+}
+.photoImg{
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 10rpx;
+}
+.photoClo{
+  position: relative;
+}
+.imgClose{
+  position: absolute;
+  right: -15rpx;
+  top: -15rpx;
+  width: 35rpx;
+  height: 35rpx;
+  z-index: 3;
+}
+.addImg{
+  width: 144rpx;
+  height: 144rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  /* margin-left: 20rpx; */
+  background: #F8F8F8 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAABO0lEQVRoQ+2aQWqEQBBFq4jBIVm4ljnQDELrDdxk4QVyjFzARTbeQBskOVBw7SIhQwwVmpAggUDhdDsI33X76/fvR2lrMwW4mqa5TZKkdNLjODZlWb4GKEMcQrRt2ydmPjhtEXkuiuIYoo5383VdX6dpeiL6DUaGYYirqvrwPQHv5vu+j6dpep8bjaJol2WZm5DXC+bncSJ5JVzABtgoUZkPAzbABtgsSADYLAgN3QbYAJsFCVwMG2vtjYjcEdH+TN8/t18R0f0frQci+vSk/8LMj8aYN7bWtiKSexJeRYaZO2NMwV3Xuf1mvEpVf0VOeZ7vtp38ppn3t5LfStiAKxPFu83FHlLKFVIPA/PKqMA8mFeigo9O/wWFbqNECN0G3UaJCroNus0CVIJis+k/4C6ZzZ49cObXOvXxBXiLfT+mZ9qPAAAAAElFTkSuQmCC") no-repeat center center;
+  background-size: 46rpx 46rpx;
+}
+.verificationPhoto,.jobsPopup,.verificationPhotoJ{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background: rgba(106,102,104,.6)
+}
+.verificationPhotoJ{
+  top: 130rpx;
+}
+.jobsPopup{
+  top: 200rpx;
+  background:#fff;
+}
+.jobsPopup .msgColumn{
+  border-bottom: solid 1rpx #ececec;
+}
+.jobsList{
+  padding: 30rpx 40rpx;
+}
+.jobsList .jobsClo{
+  display: inline-block;
+  padding: 8rpx 15rpx;
+  border: solid 1rpx #aaa;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  color: #444;
+  margin: 0 10rpx 20rpx;
+}
+.phoneCode{
+  width: 522rpx;
+  /* height: 461rpx; */
+  padding: 40rpx 30rpx 60rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+}
+
+.popupTitle{
+  text-align: center;
+  color: #333333;
+  font-size: 30rpx;
+}
+.phototextP{
+  font-size: 28rpx;
+  color: #282828;
+  display: inline-block;
+  vertical-align: middle;
+}
+.phototextPP{
+  color: #B1B1B1;
+}
+.photoIcon{
+  width: 22rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+.nameIcon{
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+.codeIcon{
+  width: 24rpx;
+  height: 26rpx;
+}
+.photoText{
+  border-bottom:  solid 1rpx #E9E9E9;
+  padding: 60rpx 0 10rpx;
+  position: relative;
+}
+.codeBtn,.codeBtnYZ,.codeBtnYZB{
+  position: absolute;
+  right: 0;
+  top: 60rpx;
+  z-index: 4;
+  font-size: 28rpx;
+  color: #50DABE;
+}
+.codeBtnYZ{
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40rpx;
+}
+.codeBtnYZB{
+  right: 40rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5rpx 8rpx;
+  border: solid 1rpx #50DABE;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+}
+.verificationBtn{
+  width: 338rpx;
+  height: 56rpx;
+  background: #50DABE;
+  border-radius: 28rpx;
+  margin: 45rpx auto 0;
+  text-align: center;
+  line-height: 56rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.checkMoreBtn{
+  width: 220rpx;
+  height: 59rpx;
+  border: 2rpx solid #50DABE;
+  border-radius: 8rpx;
+  margin: 0 auto 40rpx;
+  font-size: 25rpx;
+  color: #50DABE;
+ text-align: center;
+ line-height: 59rpx;
+}
+.btn-area button{
+  width: 653rpx !important;
+  height: 73rpx !important;
+  background: #50DABE !important;
+  border-radius: 8rpx;
+  font-size: 26rpx !important;
+  color: #fff;
+}
+
+radio .wx-radio-input{ 
+  /* 自定义样式.... */
+    height: 40rpx; 
+    width: 40rpx;
+    margin-top: -4rpx;
+    border-radius: 50%;
+    border: 2rpx solid #999;
+    background: transparent;
+ }
+ label{
+   padding: 30rpx 40rpx;
+  display: inline-block;
+  font-size: 30rpx;
+  color: #424242
+
+ }
+ .cellName{
+   font-size: 30rpx;
+   color: #424242;
+ }
+ .btn-area{
+   margin-top: 30rpx;
+ }
+
+ .jobsList .active{
+  border: solid 1rpx#50DABE;
+  color: #50DABE;
+}
+.jobsTitle{
+  font-size: 30rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+.jobsBtnCont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  font-size: 30rpx;
+  color: #4395ff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  border-bottom: solid 1rpx #ececec;
+}

@@ -1,0 +1,137 @@
+.navigate-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #fff !important;
+  /* text-align: center; */
+}
+
+.navigate-box {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigate-text {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navigate-text.androidLeft {
+  position: absolute;
+  left: 75rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navigate-iconBox {
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navigate-icon {
+  display: block;
+  width: 18rpx;
+  height: 32rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 55%;
+  transform: translateY(-50%);
+}
+
+/* 搜索结束 */
+
+/* 详情页开始 */
+
+.navBar {
+  position: absolute;
+  left: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 174rpx;
+  height: 64rpx;
+  /* background: rgba(255, 255, 255, 0.4); */
+  border-radius: 40rpx;
+  z-index: 8;
+}
+
+.navBar .return {
+  width: 30%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.title{
+  font-size: 28rpx;
+}
+
+/* .navBar .return::after {
+  content: '';
+  display: inline-block;
+  width: 2rpx;
+  height: 37rpx;
+  background: #c5c5c5;
+  position: absolute;
+  right: 0;
+  top: 13rpx;
+  z-index: 3;
+} */
+
+.navBar .return image {
+  width: 18rpx;
+  height: 32rpx;
+  margin-top: 16rpx;
+}
+
+.navBar .home {
+  display: inline-block;
+  /* width: 50%; *//* text-align: center; */
+  margin-left: 22rpx;
+  vertical-align: middle;
+}
+
+.navBar .home image {
+  width: 34rpx;
+  height: 33rpx;
+  margin-top: 16rpx;
+}
+
+/* 详情页结束 */
+
+/* 分类开始 */
+
+.navBar01 {
+  position: absolute;
+  left: 27rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+}
+
+.navBar01 text {
+  font-size: 38rpx;
+  color: #000;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.navBar01 image {
+  width: 322rpx;
+  height: 56rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* 分类结束 */

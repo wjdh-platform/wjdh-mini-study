@@ -1,0 +1,36 @@
+<!--components/changeCell/changeCell.wxml-->
+<view>
+  <view class="changeCellPopup" wx:if="{{changeCellType}}">
+    <view class="changeCont">
+      <view class="closePopup" bindtap="closePopup"></view>
+      <view class="popupTitle">切换小区</view>
+      <picker bindchange="bindProvincesList" value="{{provincesIdx}}" range="{{provincesData}}"
+        range-key="province_name">
+        <view class="changePicker">
+          {{provincesData[provincesIdx].province_name}}
+        </view>
+      </picker>
+      <picker bindchange="bindCityList" value="{{cityIdx}}" range="{{cityData}}" range-key="city_name"
+        wx:if="{{cityType}}">
+        <view class="changePicker">
+          {{cityData[cityIdx].city_name}}
+        </view>
+      </picker>
+      <picker bindchange="bindvillageList" value="{{villageIdx}}" range="{{villageList}}" range-key="community_name"
+        wx:if="{{cellType}}">
+        <view class="changePicker">
+          {{villageList[villageIdx].community_name}}
+        </view>
+      </picker>
+      <view class="enterBtn" bindtap="enterBtn">确定</view>
+    </view>
+  </view>
+  <movable-area class="movable-area" wx:else>
+    <movable-view x="{{windowWidth}}" y="{{windowHeight}}" class="movable-view" direction='all' catchtap="bindtapdianhua">
+    <view class="changeCellImg" bindtap="changePopupType">
+        <image src="../../static/image/cellIcon.png"></image>
+        <view class="changeText">切换小区</view>
+    </view>
+  </movable-view>
+  </movable-area>
+</view>

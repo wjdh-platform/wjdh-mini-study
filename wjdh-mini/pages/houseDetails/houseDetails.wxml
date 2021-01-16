@@ -1,0 +1,168 @@
+<!--pages/houseDetails/houseDetails.wxml-->
+<view class="houseDetails">
+  <title-Navigation detail="true" title="{{title}}"></title-Navigation>
+  <change-cell changeCellType="{{changeCellType}}" 
+  bindchangeClose="changeClose" bindchangePopupType="changePopupType" buildingsType="{{buildingsType}}"
+  title="{{title}}" wx:if="{{false}}"></change-cell>
+  <view class="houseClo" wx:if="{{detailsData}}">
+  <view class="column">
+  <!-- <view class="title">{{detailsData.introduction}}<view class="addMember" bindtap="addFamily">增加人员</view></view> -->
+  <view class="title">{{detailsData.introduction}}</view>
+    <view class="item">
+      <view class="itemTitle">房屋类别</view>
+      <view class="itemText">{{detailsData.house_type}}</view>
+    </view>
+    <view class="item">
+      <view class="itemTitle">房屋用途</view>
+      <view class="itemText">{{detailsData.use}}</view>
+    </view>
+    <view class="item">
+      <view class="itemTitle">房屋性质</view>
+      <view class="itemText">{{detailsData.xingzhi}}</view>
+    </view>
+    <view class="item">
+      <view class="itemTitle">居住现状</view>
+      <view class="itemText">{{detailsData.status}}</view>
+    </view>
+    <view class="item">
+      <view class="itemTitle">管理人</view>
+      <view class="itemText">{{detailsData.zhuhuleixing}}</view>
+    </view>
+  </view>
+  <view class="column">
+    <view class="tabCont">
+      <view class="tabs  {{currentTab == 0?'active':''}}" data-current="0" bindtap="tabTap">已绑定</view>
+      <view class="tabs {{currentTab == 1?'active':''}}" data-current="1" bindtap="tabTap">未绑定</view>
+      <view class="tabs {{currentTab == 2?'active':''}}" data-current="2" bindtap="tabTap">已激活</view>
+      <view class="tabs {{currentTab == 3?'active':''}}" data-current="3" bindtap="tabTap">未激活</view>
+    </view>
+    <view class="memberList" wx:if="{{currentTab == 0}}">
+      <view class="columnMe" wx:for="{{detailsData.yibangding}}" wx:if="{{detailsData.yibangding!=[]}}">
+        <view class="name">{{item.name}}</view>
+        <view class="operation">
+          <view class="btnType {{item.shouquan == '邀请激活'?'yellow':item.shouquan == '授权管理'?'green':item.shouquan == '禁用管理'?'red':'default'}}" bindtap="binding" data-idx="{{index}}" data-id="{{item.people_house_id}}"   data-shouquan="{{item.shouquan}}">{{item.shouquan}}
+          <button open-type="share" class="shareBtnO" wx:if="{{item.shouquan == '邀请激活'}}"></button>
+        </view> 
+        <view class="btnType {{item.charge == '授权支付'?'green':'red'}}" wx:if="{{item.charge}}" bindtap="bindCharge" data-idx="{{index}}" data-id="{{item.people_house_id}}"   data-charge="{{item.charge}}">{{item.charge}}
+        </view>
+        <view class="btnType {{item.jiebang == '解绑'?'green':'yellow'}}" bindtap="jiebang" data-shouquan="{{item.shouquan}}" data-idx="{{index}}" wx:if="{{item.shouquan!='管理员'&&item.shouquan!='邀请激活'}}" data-jiebang="{{item.jiebang}}">{{item.jiebang}}</view>
+        </view>
+        
+      </view>
+      <view class="noData"  wx:if="{{detailsData.yibangding.length === 0}}">暂无数据</view>
+    </view>
+    <view class="memberList" wx:if="{{currentTab == 1}}">
+      <view class="columnMe" wx:for="{{detailsData.weibangding}}" wx:if="{{detailsData.weibangding!=[]}}">
+        <view class="name">{{item.name}}</view>
+        <view class="action">{{item.action}}</view>
+      </view>
+      <view class="noData" wx:if="{{detailsData.weibangding.length === 0}}">暂无数据</view>
+    </view>
+    <view class="memberList" wx:if="{{currentTab == 2}}">
+      <view class="columnMe" wx:for="{{detailsData.yijihuo}}" wx:if="{{detailsData.yijihuo!=[]}}">
+        <view class="name">{{item.name}}</view>
+      </view>
+      <view class="noData" wx:if="{{detailsData.yijihuo.length === 0}}">暂无数据</view>
+    </view>
+    <view class="memberList" wx:if="{{currentTab == 3}}">
+      <view class="columnMe" wx:for="{{detailsData.weijihuo}}" wx:if="{{detailsData.weijihuo!=[]}}">
+        <view class="name">{{item.name}}</view>
+        <!-- <view class="jiebang">解绑</view> -->
+        <button open-type="share" class="shareBtn">邀请激活</button>
+      </view>
+      <view class="noData" wx:if="{{detailsData.weijihuo.length === 0}}">暂无数据</view>
+    </view>
+
+
+  </view>
+</view>
+<view class="houseClo" wx:else>
+  <view class="column">
+    <view class="item">
+    <view class="itemTitle">审核状态</view>
+    <view class="itemText {{shenheData.shenhe.shenhe_status == '等待审核'?'yellow01':'red01'}}">{{shenheData.shenhe.shenhe_status}}</view>
+  </view>
+  <view class="item" wx:if="{{shenheData.shenhe.shenhe_refuse_reason}}">
+    <view class="itemTitle">审核失败原因</view>
+    <view class="itemText">{{shenheData.shenhe.shenhe_refuse_reason}}</view>
+  </view>
+  </view>
+  <view class="column">
+  <view class="title">{{shenheData.shenhe.shenhe_house_introduction}}</view>
+  <view class="item">
+    <!-- <view class="itemTitle">房屋用途</view> -->
+    <view class="itemText status">{{shenheData.shenhe.shenhe_action_introduction}}</view>
+  </view>
+  <view class="item" wx:if="{{shenheData.list!=''}}" wx:for="{{shenheData.list}}"  wx:for-index="key">
+    <view class="itemTitle">{{key}}</view>
+    <view class="itemText">{{item}}</view>
+  </view>
+  <!-- <view class="item" wx:if="{{shenheData.xingzhi!=''}}">
+    <view class="itemTitle">房屋性质</view>
+    <view class="itemText">{{shenheData.xingzhi}}</view>
+  </view>
+  <view class="item" wx:if="{{shenheData.house_status!=''}}">
+    <view class="itemTitle">房屋状态</view>
+    <view class="itemText">{{shenheData.house_status}}</view>
+  </view>
+  <view class="item" wx:if="{{shenheData.zhuhuleixing!=''}}">
+    <view class="itemTitle">管理人</view>
+    <view class="itemText">{{shenheData.zhuhuleixing}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">身份证号</view>
+    <view class="itemText">{{shenheData.idcard}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">姓名</view>
+    <view class="itemText">{{shenheData.name}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">性别</view>
+    <view class="itemText">{{shenheData.sex}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">出生日期</view>
+    <view class="itemText">{{shenheData.birth}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">民族</view>
+    <view class="itemText">{{shenheData.nation}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">户籍地址</view>
+    <view class="itemText">{{shenheData.address}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">职业</view>
+    <view class="itemText">{{shenheData.job}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">工作单位</view>
+    <view class="itemText">{{shenheData.company}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">政治面貌</view>
+    <view class="itemText">{{shenheData.zhengzhimianmao}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">是否退役军人</view>
+    <view class="itemText">{{shenheData.tuiyijunren}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">是否上访</view>
+    <view class="itemText">{{shenheData.shangfang}}</view>
+  </view>
+  <view class="item">
+    <view class="itemTitle">是否低保</view>
+    <view class="itemText">{{shenheData.dibao}}</view>
+  </view> -->
+  
+</view>
+<view class="shenheStatus">
+  <view class="delBtn" bindtap="delCell" data-id="{{shenheData.shenhe.id}}">删除</view>
+  <view class="delText">注：删除后可重新填写</view>
+  
+</view>
+</view>
+</view>

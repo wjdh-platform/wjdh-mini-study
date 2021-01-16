@@ -1,0 +1,17 @@
+<!--pages/notice/details/details.wxml-->
+<view class="details">
+  <view class="title">
+    <view class="icon"><image src="{{noticeDetails.logo}}"></image></view>
+    <view class="title">
+      <view class="text">晨曦家园物业</view>
+      <view class="time">{{noticeDetails.date}}</view>
+    </view>
+  </view>
+  <view class="titleName">{{noticeDetails.title}}</view>
+  <view class="introduction">
+    <rich-text nodes="{{noticeDetails.content}}"></rich-text>
+  </view>
+  <view class="imgList">
+    <image wx:for="{{noticeDetails.images}}" mode="aspectFit" src="{{item}}" bindtap="previewImage" data-idx="{{index}}"></image>
+  </view>
+</view>

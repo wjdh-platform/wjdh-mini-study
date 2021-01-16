@@ -1,0 +1,18 @@
+<!--pages/visitor/visitor.wxml-->
+<view class="visitor">
+  <view wx:if="{{share}}">
+  <view class="column">
+      <view class="titleC">访客通行有效时间*</view>
+      <picker bindchange="bindType" value="{{timeIdx}}" range="{{timeList}}">
+        <view class="address">{{timeList[timeIdx]}}</view>
+      </picker>
+      <image class="arrow" src="./../../static/image/arrow.png"></image>
+    </view>
+    <button open-type="share" class="shareBtn"><image src="../../static/image/shareBtn.jpeg"></image></button>
+    <view class="shareText">分享给访客，以获得授权二维码</view>
+  </view>
+  <view wx:else>
+    <view class="erweimaText">访客二维码</view>
+    <image class="erweima" src="../../static/image/erweima.png"></image>
+  </view>
+</view>

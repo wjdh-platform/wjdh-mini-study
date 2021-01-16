@@ -1,0 +1,30 @@
+<!--pages/login/register/register.wxml-->
+<!--注册模块-->
+  <view class="registerCont">
+    <view class="loginWidth">
+      <view class="helloText">欢迎使用万家灯火小程序</view>
+      <view class="helloText02">不辜负每一次的相遇</view>
+    </view>
+    <view class="loginWidth formCont">
+      <view class="form">
+        <view class="title">手机号</view>
+        <input placeholder="请输入手机号" placeholder-class="placeholderClass" bindblur="phoneBlur"></input>
+      </view>
+      <view class="form">
+        <view class="title">验证码</view>
+        <view class="code">
+          <input placeholder="请输入验证码" placeholder-class="placeholderClass"  bindblur="codeBlur"></input>
+          <view class="codeBtn" bindtap="obtainCode">{{codeBtnText}}</view>
+        </view>
+      </view>
+      <view class="form">
+        <view class="title">密码</view>
+        <input placeholder="请输入密码" placeholder-class="placeholderClass" password="true" bindblur="passwordBlur"></input>
+      </view>
+      <view class="form">
+        <view class="title">确认密码</view>
+        <input placeholder="请再次输入密码" placeholder-class="placeholderClass"password="true"  bindblur="passwordBlurAgain"></input>
+      </view>
+    </view>
+    <button class="registerBtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">注册</button>
+  </view>

@@ -1,0 +1,25 @@
+<!--pages/phoneCall/phoneCall.wxml-->
+<view class="phoneCall" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType" title="{{title}}" bindcloseBtn="closeBtn">
+  </change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view class="phoneCallCont" wx:if="{{wyPhone!=''}}">
+    <view class="title">物业电话：</view>
+    <view class="phoneCont">
+      <view class="column" data-num="{{wyPhone}}" bindtap="callNum">
+      <image src="../../static/image/phoneIcon.jpeg"></image><view class="phoneText">{{wyPhone}}</view>
+    </view>
+    </view>
+    
+  </view>
+  <view class="phoneCallCont">
+    <view class="title">应急电话：</view>
+    <view class="phoneCont">
+      <view class="column" wx:for="{{phoneList}}" data-num="{{item.phoneNum}}" bindtap="callNum" wx:key="index">
+      <image src="../../static/image/phoneIcon.jpeg"></image><view class="phoneText">{{item.phoneTitle}}</view>
+    </view>
+    </view>
+    
+  </view>
+  <view class="remarks">注：点击按钮即可拨打电话</view>
+</view>

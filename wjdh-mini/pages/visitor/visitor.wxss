@@ -1,0 +1,47 @@
+/* pages/visitor/visitor.wxss */
+.column{
+  padding: 44rpx 0 40rpx;
+  margin-left: 36rpx;
+  border-bottom: solid 1rpx #F1F1F1;
+  position: relative;
+}
+.titleC{
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #969696;
+  margin-bottom: 20rpx;
+}
+.shareText{
+  font-size: 28rpx;
+  color: #808080;
+  text-align: center;
+}
+.arrow{
+  position: absolute;
+  right: 40rpx;
+  top: 90rpx;
+  /* transform: translateY(-50%); */
+  width: 14rpx;
+  height: 24rpx;
+}
+.erweimaText{
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+  margin: 40rpx 0;
+}
+.erweima{
+  width: 260rpx;
+  height: 260rpx;
+  display: block;
+  margin: 50rpx auto;
+}
+.shareBtn{
+  margin-top: 60rpx;
+  background: transparent;
+}
+.shareBtn image{
+  width: 286rpx;
+  height: 286rpx;
+}

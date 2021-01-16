@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/property/property",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/bindCell/bindCell",
+    "pages/houseList/ownerHouseList/ownerHouseList",
+    "pages/login/register/register",
+    "pages/houseDetails/houseDetails",
+    "pages/repair/repair",
+    "pages/notice/notice",
+    "pages/notice/details/details",
+    "pages/phoneCall/phoneCall",
+    "pages/proposal/proposal",
+    "pages/visitor/visitor",
+    "pages/lifePay/lifePay",
+    "pages/houseList/payList/payList",
+    "pages/demo/demo",
+    "pages/houseList/repairList/repairList",
+    "pages/houseList/proposalList/repairList",
+    "pages/houseList/payList/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "万家灯火",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1D96FF",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/property/property",
+        "text": "物业",
+        "iconPath": "/static/tabBar/property.png",
+        "selectedIconPath": "/static/tabBar/propertyA.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/static/tabBar/personal.png",
+        "selectedIconPath": "/static/tabBar/personalA.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
+}

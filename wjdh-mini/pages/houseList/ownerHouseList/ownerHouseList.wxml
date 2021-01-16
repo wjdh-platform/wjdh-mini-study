@@ -1,0 +1,64 @@
+<view class="listCont" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType"
+    buildingsType="{{buildingsType}}" title="{{title}}"  bindcloseBtn="closeBtn"></change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view class="houseListCont">
+
+    <view class="tabCont">
+    <view class="tabs  {{currentTab == 0?'active':''}}" data-current="0" bindtap="tabTap">绑定</view>
+    <view class="tabs {{currentTab == 1?'active':''}}" data-current="1" bindtap="tabTap">解绑</view>
+  </view>
+
+    <view class="listCont" wx:if="{{currentTab == 0}}">
+      <view class="list" wx:if="{{houseList.length>0}}">
+      <view class="listColumn {{item.isActive ? 'active' : ''}}" bindtap="bindListDetail" wx:for="{{houseList}}"
+        wx:key="index" data-houseId="{{item.house_id}}" data-shenheId="{{item.shenhe_id}}" data-role="{{item.role}}"
+        bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" data-del="{{item.deleted_at}}" data-status="{{item.status}}">
+        <image class="houseListIcon" src="../../../static/image/houseListIcon.jpg"></image>
+        <view class="houseCont">
+          <view class="houseName">{{item.introduction}}</view>
+          <view class="introduction" wx:if="{{item.not_register>0}}"><text>{{item.not_register}}</text>人未激活</view>
+          <view class="introduction" wx:if="{{item.action&&item.action !=''}}">{{item.action}}</view>
+          <view class="introduction green" wx:if="{{item.deleted_at&&item.deleted_at !=''}}">{{item.deleted_at}}</view>
+        </view>
+        <view class="houseType fail" wx:if="{{item.status == '未通过审核'}}">{{item.status}}</view>
+        <view class="houseType shenheing" wx:if="{{item.status == '解绑审核中'||item.status == '审核中'}}">{{item.status}}
+        </view>
+        <view class="houseType" wx:if="{{item.status == '审核已通过'}}">{{item.status}}</view>
+        <view class="delList" data-index="{{index}}" catchtap="del" data-del="{{item.deleted_at}}">
+          {{listType?listTypeJB:listTypeDel}}</view>
+
+      </view>
+    </view>
+    <view class="listNone" wx:else>暂无列表数据</view>
+    </view>
+    <view class="listCont" wx:if="{{currentTab == 1}}">
+      <view class="list" wx:if="{{houseList.length>0}}">
+      <view class="listColumn {{item.isActive ? 'active' : ''}}" bindtap="bindListDetail" wx:for="{{houseList}}"
+        wx:key="index" data-houseId="{{item.house_id}}" data-shenheId="{{item.shenhe_id}}" data-role="{{item.role}}"
+        bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" data-del="{{item.deleted_at}}">
+        <image class="houseListIcon" src="../../../static/image/houseListIcon.jpg"></image>
+        <view class="houseCont">
+          <view class="houseName">{{item.introduction}}</view>
+          <view class="introduction" wx:if="{{item.not_register>0}}"><text>{{item.not_register}}</text>人未激活</view>
+          <view class="introduction" wx:if="{{item.action&&item.action !=''}}">{{item.action}}</view>
+          <view class="introduction green" wx:if="{{item.deleted_at&&item.deleted_at !=''}}">{{item.deleted_at}}</view>
+        </view>
+        <view class="houseType fail" wx:if="{{item.status == '未通过审核'}}">{{item.status}}</view>
+        <view class="houseType shenheing" wx:if="{{item.status == '解绑审核中'||item.status == '审核中'}}">{{item.status}}
+        </view>
+        <view class="houseType" wx:if="{{item.status == '审核已通过'}}">{{item.status}}</view>
+        <view class="delList" data-index="{{index}}" catchtap="del" data-del="{{item.deleted_at}}">
+          {{listType?listTypeJB:listTypeDel}}</view>
+
+      </view>
+    </view>
+    <view class="listNone" wx:else>暂无列表数据</view>
+    </view>
+    
+
+
+
+  </view>
+
+</view>

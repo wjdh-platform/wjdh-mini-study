@@ -1,0 +1,60 @@
+/* pages/notice/notice.wxss */
+page{
+  background: #FFF8F8FB;
+  /* padding-top: 110rpx; */
+}
+.column{
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.top{
+  position: absolute;
+  right: 0;
+  top: 16rpx;
+  width: 74rpx;
+  height: 37rpx;
+  background: #50DABE;
+  border-radius: 8rpx 0px 0px 8rpx;
+  text-align: center;
+  line-height: 37rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.noData{
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  padding: 100rpx 0;
+}
+.title{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 28rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+text-overflow:ellipsis; white-space: nowrap;
+width: 94%;
+}
+.name,.time,.date{
+  display: inline-block;
+  font-size: 22rpx;
+  color: #B2B2B2;
+  margin-right: 20rpx;
+}
+.name{
+  color: #50DABE;
+}
+.introduction{
+  display: flex;
+}
+.date{
+  flex: 1;
+  text-align: left;
+}

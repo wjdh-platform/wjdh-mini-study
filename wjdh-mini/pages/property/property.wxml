@@ -1,0 +1,53 @@
+<view class="propertyMain" style="padding-top:{{navH}}px">
+  <change-cell changeCellType="{{changeCellType}}" bindchangeClose="changeClose" bindchangePopupType="changePopupType" title="{{title}}" bindcloseBtn="closeBtn">
+  </change-cell>
+  <title-Navigation detail="true" title="{{title}}" backType="{{backType}}"></title-Navigation>
+  <view class="activationP" wx:if="{{popupTips}}">
+    <view class="activitionCont">
+      <view class="popupTitle">温馨提示</view>
+      <view class="closePopup" bindtap="closePopupTips"></view>
+      <view class="tipsText">
+        <text wx:for="{{pinsText}}">{{item}}</text>
+      </view>
+      <view class="tipsBtn" bindtap="tipsNone">已知悉，不再提示</view>
+    </view>
+  </view>
+  <image class="banner" src='/static/image/banner.jpg'></image>
+  <view class="tabList">
+    <view class="tabCol" bindtap="bindCell" wx:for="{{list}}" data-idx="{{index}}" wx:key="index">
+      <image src="{{item.icon}}"></image>
+      <view class="bindText">{{item.text}}</view>
+    </view>
+  </view>
+  <view class="activationP" wx:if="{{activationType}}">
+    <view class="activitionCont">
+      <view class="popupTitle">激活手机号</view>
+      <view class="closePopup" bindtap="closePopup"></view>
+      <!-- <view class="column01">
+        <view class="title">小区</view>
+        <picker bindchange="bindvillageList" value="{{villageIdx}}" range="{{villageList}}" range-key="community_name">
+          <view class="picker">
+            {{villageList[villageIdx].community_name}}
+          </view>
+        </picker>
+        <image class="arrow" src="./../../static/image/arrow.png"></image>
+      </view> -->
+      <view class="photoText">
+        <image src="./../../static/image/name.png" class="photoIcon"></image>
+        <input placeholder="请输入姓名" bindinput="nameBlur" placeholder-class="phototextPP" class="phototextP"></input>
+      </view>
+      <view class="photoText">
+        <image src="./../../static/image/photoIcon.png" class="photoIcon"></image>
+        <input type="number" placeholder="请输入手机号" bindinput="phoneBlur" placeholder-class="phototextPP"
+          class="phototextP"></input>
+      </view>
+      <view class="photoText">
+        <image src="./../../static/image/codeIcon.png" class="photoIcon codeIcon"></image>
+        <input type="number" placeholder="请输入验证码" placeholder-class="phototextPP" class="phototextP"
+          bindinput="codeBlur"></input>
+        <view class="codeBtn" bindtap="obtainCode">{{codeBtnText}}</view>
+      </view>
+      <view class="verificationBtn" bindtap="verificationBtn">确定</view>
+    </view>
+  </view>
+</view>

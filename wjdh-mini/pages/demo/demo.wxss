@@ -1,0 +1,110 @@
+/**index.wxss**/
+.input {
+  padding-top: 300rpx;
+  width: 100%;
+}
+
+.input input {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx 50rpx;
+}
+
+.section {
+  padding-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+
+page {
+
+  background-color: #fafafa;
+
+}
+
+.item {
+
+  background-color: #fff;
+
+  margin-top: 20rpx;
+
+  padding: 40rpx;
+
+  font-size: 28rpx;
+
+  color: #333;
+
+  transition: all .4s;
+
+}
+
+.item .author {
+
+  font-size: 24rpx;
+
+  color: #aaa;
+
+  text-align: right;
+
+  line-height: 100%;
+
+}
+
+.del {
+
+  width: 160rpx;
+
+  height: 100%;
+
+  background-color: #f18a69;
+
+  font-size: 36rpx;
+
+  color: #fff;
+
+  position: absolute;
+
+  right: -160rpx;
+
+  top: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.active {
+
+  transform: translate(-160rpx)
+}
+
+
+
+
+
+
+
+
+
+
+
